@@ -1,1 +1,1 @@
-# AI_Hexapawn
+# AI_Board_Games
