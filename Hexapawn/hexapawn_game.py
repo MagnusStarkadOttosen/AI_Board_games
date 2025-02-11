@@ -33,6 +33,9 @@ class Hexapawn_Node:
 
         for move in moves:
             new_board = apply_move(self.board, move)
+            new_board_tuple = canonical_board_tuple(new_board)
+            if new_board_tuple in Hexapawn_Node.seen_states:
+                continue
             next_turn = "B" if self.turn == "W" else "W"
             child = Hexapawn_Node(new_board, next_turn, parent=self, move=move)
             self.children.append(child)
