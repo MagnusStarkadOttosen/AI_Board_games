@@ -1,9 +1,5 @@
 from anytree import Node, RenderTree
 from anytree.exporter import DotExporter
-# import os
-# os.environ["PATH"] += os.pathsep + r"C:\Program Files\Graphviz\bin"
-# os.environ["TMP"] = "C:\\GraphvizTemp"
-# os.environ["TEMP"] = "C:\\GraphvizTemp"
 
 class Hexapawn_Node:
     seen_states = set()
@@ -102,8 +98,17 @@ def print_tree(node, depth=0):
         print_tree(child, depth + 1)
 
 def build_anytree(node, parent=None):
+    if node.winner == "B":
+        color = "red"
+    elif node.winner == "W":
+        color = "green"
+    elif node.winner == "Tie":
+        color = "blue"
+    else:
+        color = "white"
+    
     move_text = f"Move: {node.move}" if node.move else "Root"
-    tree_node = Node(f"{move_text}\n{node.board_str()}", parent=parent)
+    tree_node = Node(f"{move_text}\n{node.board_str()}", parent=parent, winner=node.winner, color=color)
     for child in node.children:
         build_anytree(child, tree_node)
     return tree_node
@@ -119,6 +124,11 @@ def canonical_board_tuple(board):
     mirrored = board_to_tuple(mirror_board(board))
     return min(original, mirrored)
 
+def export_colored_tree(anytree_root, filename="hexapawn_tree.dot"):
+    DotExporter(anytree_root,
+                nodeattrfunc=lambda node: f'style=filled, fillcolor={node.color}')\
+                .to_dotfile(filename)
+
 initial_board = [
     ["B","B","B"],
     ["_","_","_"],
@@ -130,10 +140,13 @@ root.generate_valid_children()
 
 # print_tree(root)
 
-anytree_root = build_anytree(root)
-for pre, fill, node in RenderTree(anytree_root):
-    print(f"{pre}{node.name}")
+# anytree_root = build_anytree(root)
+# for pre, fill, node in RenderTree(anytree_root):
+#     print(f"{pre}{node.name}")
 
-# DotExporter(anytree_root).to_picture("hexapawn_tree.png")
-from anytree.exporter import DotExporter
-DotExporter(anytree_root).to_dotfile("hexapawn_tree.dot")
+# # DotExporter(anytree_root).to_picture("hexapawn_tree.png")
+# from anytree.exporter import DotExporter
+# DotExporter(anytree_root).to_dotfile("hexapawn_tree.dot")
+
+anytree_root = build_anytree(root)
+export_colored_tree(anytree_root)

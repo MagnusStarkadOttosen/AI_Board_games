@@ -1,0 +1,820 @@
+digraph tree {
+    "Root
+BBB
+___
+WWW" [style=filled, fillcolor=white];
+    "Move: ((2, 0), (1, 0))
+BBB
+W__
+_WW" [style=filled, fillcolor=white];
+    "Move: ((0, 1), (1, 1))
+B_B
+WB_
+_WW" [style=filled, fillcolor=white];
+    "Move: ((2, 2), (1, 2))
+B_B
+WBW
+_W_" [style=filled, fillcolor=blue];
+    "Move: ((2, 2), (1, 1))
+B_B
+WW_
+_W_" [style=filled, fillcolor=white];
+    "Move: ((0, 0), (1, 1))
+__B
+WB_
+_W_" [style=filled, fillcolor=white];
+    "Move: ((1, 0), (0, 0))
+W_B
+_B_
+_W_" [style=filled, fillcolor=green];
+    "Move: ((0, 2), (1, 2))
+B__
+WWB
+_W_" [style=filled, fillcolor=white];
+    "Move: ((1, 1), (0, 1))
+BW_
+W_B
+_W_" [style=filled, fillcolor=green];
+    "Move: ((1, 1), (0, 0))
+W__
+W_B
+_W_" [style=filled, fillcolor=green];
+    "Move: ((2, 1), (1, 2))
+B__
+WWW
+___" [style=filled, fillcolor=white];
+    "Move: ((0, 0), (1, 1))
+___
+WBW
+___" [style=filled, fillcolor=white];
+    "Move: ((1, 0), (0, 0))
+W__
+_BW
+___" [style=filled, fillcolor=green];
+    "Move: ((1, 2), (0, 2))
+__W
+WB_
+___" [style=filled, fillcolor=green];
+    "Move: ((0, 2), (1, 1))
+B__
+WB_
+_W_" [style=filled, fillcolor=blue];
+    "Move: ((0, 1), (1, 0))
+B_B
+B__
+_WW" [style=filled, fillcolor=white];
+    "Move: ((2, 1), (1, 1))
+B_B
+BW_
+__W" [style=filled, fillcolor=white];
+    "Move: ((0, 0), (1, 1))
+__B
+BB_
+__W" [style=filled, fillcolor=white];
+    "Move: ((2, 2), (1, 2))
+__B
+BBW
+___" [style=filled, fillcolor=white];
+    "Move: ((1, 0), (2, 0))
+__B
+_BW
+B__" [style=filled, fillcolor=red];
+    "Move: ((1, 1), (2, 1))
+__B
+B_W
+_B_" [style=filled, fillcolor=red];
+    "Move: ((2, 2), (1, 1))
+__B
+BW_
+___" [style=filled, fillcolor=white];
+    "Move: ((0, 2), (1, 2))
+___
+BWB
+___" [style=filled, fillcolor=white];
+    "Move: ((1, 1), (0, 1))
+_W_
+B_B
+___" [style=filled, fillcolor=green];
+    "Move: ((0, 2), (1, 1))
+___
+BB_
+___" [style=filled, fillcolor=red];
+    "Move: ((1, 0), (2, 0))
+__B
+_W_
+B__" [style=filled, fillcolor=red];
+    "Move: ((0, 2), (1, 2))
+B__
+BWB
+__W" [style=filled, fillcolor=white];
+    "Move: ((1, 1), (0, 1))
+BW_
+B_B
+__W" [style=filled, fillcolor=green];
+    "Move: ((1, 1), (0, 0))
+W__
+B_B
+__W" [style=filled, fillcolor=green];
+    "Move: ((0, 2), (1, 1))
+B__
+BB_
+__W" [style=filled, fillcolor=white];
+    "Move: ((2, 2), (1, 2))
+B__
+BBW
+___" [style=filled, fillcolor=white];
+    "Move: ((1, 0), (2, 0))
+B__
+_BW
+B__" [style=filled, fillcolor=red];
+    "Move: ((1, 1), (2, 1))
+B__
+B_W
+_B_" [style=filled, fillcolor=red];
+    "Move: ((2, 2), (1, 1))
+B__
+BW_
+___" [style=filled, fillcolor=white];
+    "Move: ((0, 0), (1, 1))
+___
+BB_
+___" [style=filled, fillcolor=red];
+    "Move: ((1, 0), (2, 0))
+B__
+_W_
+B__" [style=filled, fillcolor=red];
+    "Move: ((1, 0), (2, 0))
+B_B
+_W_
+B_W" [style=filled, fillcolor=red];
+    "Move: ((2, 1), (1, 0))
+B_B
+W__
+__W" [style=filled, fillcolor=white];
+    "Move: ((0, 2), (1, 2))
+B__
+W_B
+__W" [style=filled, fillcolor=blue];
+    "Move: ((2, 2), (1, 2))
+B_B
+B_W
+_W_" [style=filled, fillcolor=white];
+    "Move: ((1, 0), (2, 0))
+B_B
+__W
+BW_" [style=filled, fillcolor=red];
+    "Move: ((1, 0), (2, 1))
+B_B
+__W
+_B_" [style=filled, fillcolor=red];
+    "Move: ((0, 2), (1, 2))
+BB_
+W_B
+_WW" [style=filled, fillcolor=white];
+    "Move: ((1, 0), (0, 1))
+BW_
+__B
+_WW" [style=filled, fillcolor=green];
+    "Move: ((2, 1), (1, 1))
+BB_
+WWB
+__W" [style=filled, fillcolor=white];
+    "Move: ((0, 0), (1, 1))
+_B_
+WBB
+__W" [style=filled, fillcolor=white];
+    "Move: ((1, 0), (0, 0))
+WB_
+_BB
+__W" [style=filled, fillcolor=green];
+    "Move: ((1, 0), (0, 1))
+_W_
+_BB
+__W" [style=filled, fillcolor=green];
+    "Move: ((2, 2), (1, 1))
+_B_
+WWB
+___" [style=filled, fillcolor=white];
+    "Move: ((1, 2), (2, 2))
+_B_
+WW_
+__B" [style=filled, fillcolor=red];
+    "Move: ((2, 1), (1, 2))
+BB_
+W_W
+__W" [style=filled, fillcolor=white];
+    "Move: ((0, 1), (1, 1))
+B__
+WBW
+__W" [style=filled, fillcolor=white];
+    "Move: ((1, 2), (0, 2))
+B_W
+WB_
+__W" [style=filled, fillcolor=green];
+    "Move: ((0, 1), (1, 0))
+B__
+B_W
+__W" [style=filled, fillcolor=white];
+    "Move: ((1, 2), (0, 2))
+B_W
+B__
+__W" [style=filled, fillcolor=green];
+    "Move: ((0, 1), (1, 2))
+B__
+W_B
+__W" [style=filled, fillcolor=blue];
+    "Move: ((2, 1), (1, 1))
+BBB
+_W_
+W_W" [style=filled, fillcolor=white];
+    "Move: ((0, 0), (1, 0))
+_BB
+BW_
+W_W" [style=filled, fillcolor=white];
+    "Move: ((1, 1), (0, 2))
+_BW
+B__
+W_W" [style=filled, fillcolor=green];
+    "Move: ((0, 0), (1, 1))
+_BB
+_B_
+W_W" [style=filled, fillcolor=white];
+    "Move: ((2, 0), (1, 0))
+_BB
+WB_
+__W" [style=filled, fillcolor=white];
+    "Move: ((1, 1), (2, 1))
+_BB
+W__
+_BW" [style=filled, fillcolor=red];
+    "Move: ((1, 1), (2, 2))
+_BB
+W__
+__B" [style=filled, fillcolor=red];
+    "Move: ((2, 0), (1, 1))
+_BB
+_W_
+__W" [style=filled, fillcolor=white];
+    "Move: ((0, 2), (1, 2))
+_B_
+_WB
+__W" [style=filled, fillcolor=blue];
+    "Move: ((0, 2), (1, 1))
+_B_
+_B_
+__W" [style=filled, fillcolor=white];
+    "Move: ((2, 2), (1, 2))
+_B_
+_BW
+___" [style=filled, fillcolor=white];
+    "Move: ((0, 1), (1, 2))
+___
+_BB
+___" [style=filled, fillcolor=red];
+    "Move: ((1, 1), (2, 1))
+_B_
+__W
+_B_" [style=filled, fillcolor=red];
+    "Move: ((2, 2), (1, 1))
+_B_
+_W_
+___" [style=filled, fillcolor=blue];
+    "Move: ((2, 2), (1, 2))
+_BB
+_BW
+W__" [style=filled, fillcolor=white];
+    "Move: ((1, 1), (2, 1))
+_BB
+__W
+WB_" [style=filled, fillcolor=red];
+    "Move: ((1, 1), (2, 0))
+_BB
+__W
+B__" [style=filled, fillcolor=red];
+    "Move: ((2, 2), (1, 1))
+_BB
+_W_
+W__" [style=filled, fillcolor=white];
+    "Move: ((0, 2), (1, 2))
+_B_
+_WB
+W__" [style=filled, fillcolor=white];
+    "Root
+BBB
+___
+WWW" -> "Move: ((2, 0), (1, 0))
+BBB
+W__
+_WW";
+    "Root
+BBB
+___
+WWW" -> "Move: ((2, 1), (1, 1))
+BBB
+_W_
+W_W";
+    "Move: ((2, 0), (1, 0))
+BBB
+W__
+_WW" -> "Move: ((0, 1), (1, 1))
+B_B
+WB_
+_WW";
+    "Move: ((2, 0), (1, 0))
+BBB
+W__
+_WW" -> "Move: ((0, 1), (1, 0))
+B_B
+B__
+_WW";
+    "Move: ((2, 0), (1, 0))
+BBB
+W__
+_WW" -> "Move: ((0, 2), (1, 2))
+BB_
+W_B
+_WW";
+    "Move: ((0, 1), (1, 1))
+B_B
+WB_
+_WW" -> "Move: ((2, 2), (1, 2))
+B_B
+WBW
+_W_";
+    "Move: ((0, 1), (1, 1))
+B_B
+WB_
+_WW" -> "Move: ((2, 2), (1, 1))
+B_B
+WW_
+_W_";
+    "Move: ((2, 2), (1, 1))
+B_B
+WW_
+_W_" -> "Move: ((0, 0), (1, 1))
+__B
+WB_
+_W_";
+    "Move: ((2, 2), (1, 1))
+B_B
+WW_
+_W_" -> "Move: ((0, 2), (1, 2))
+B__
+WWB
+_W_";
+    "Move: ((2, 2), (1, 1))
+B_B
+WW_
+_W_" -> "Move: ((0, 2), (1, 1))
+B__
+WB_
+_W_";
+    "Move: ((0, 0), (1, 1))
+__B
+WB_
+_W_" -> "Move: ((1, 0), (0, 0))
+W_B
+_B_
+_W_";
+    "Move: ((0, 2), (1, 2))
+B__
+WWB
+_W_" -> "Move: ((1, 1), (0, 1))
+BW_
+W_B
+_W_";
+    "Move: ((0, 2), (1, 2))
+B__
+WWB
+_W_" -> "Move: ((1, 1), (0, 0))
+W__
+W_B
+_W_";
+    "Move: ((0, 2), (1, 2))
+B__
+WWB
+_W_" -> "Move: ((2, 1), (1, 2))
+B__
+WWW
+___";
+    "Move: ((2, 1), (1, 2))
+B__
+WWW
+___" -> "Move: ((0, 0), (1, 1))
+___
+WBW
+___";
+    "Move: ((0, 0), (1, 1))
+___
+WBW
+___" -> "Move: ((1, 0), (0, 0))
+W__
+_BW
+___";
+    "Move: ((0, 0), (1, 1))
+___
+WBW
+___" -> "Move: ((1, 2), (0, 2))
+__W
+WB_
+___";
+    "Move: ((0, 1), (1, 0))
+B_B
+B__
+_WW" -> "Move: ((2, 1), (1, 1))
+B_B
+BW_
+__W";
+    "Move: ((0, 1), (1, 0))
+B_B
+B__
+_WW" -> "Move: ((2, 1), (1, 0))
+B_B
+W__
+__W";
+    "Move: ((0, 1), (1, 0))
+B_B
+B__
+_WW" -> "Move: ((2, 2), (1, 2))
+B_B
+B_W
+_W_";
+    "Move: ((2, 1), (1, 1))
+B_B
+BW_
+__W" -> "Move: ((0, 0), (1, 1))
+__B
+BB_
+__W";
+    "Move: ((2, 1), (1, 1))
+B_B
+BW_
+__W" -> "Move: ((0, 2), (1, 2))
+B__
+BWB
+__W";
+    "Move: ((2, 1), (1, 1))
+B_B
+BW_
+__W" -> "Move: ((0, 2), (1, 1))
+B__
+BB_
+__W";
+    "Move: ((2, 1), (1, 1))
+B_B
+BW_
+__W" -> "Move: ((1, 0), (2, 0))
+B_B
+_W_
+B_W";
+    "Move: ((0, 0), (1, 1))
+__B
+BB_
+__W" -> "Move: ((2, 2), (1, 2))
+__B
+BBW
+___";
+    "Move: ((0, 0), (1, 1))
+__B
+BB_
+__W" -> "Move: ((2, 2), (1, 1))
+__B
+BW_
+___";
+    "Move: ((2, 2), (1, 2))
+__B
+BBW
+___" -> "Move: ((1, 0), (2, 0))
+__B
+_BW
+B__";
+    "Move: ((2, 2), (1, 2))
+__B
+BBW
+___" -> "Move: ((1, 1), (2, 1))
+__B
+B_W
+_B_";
+    "Move: ((2, 2), (1, 1))
+__B
+BW_
+___" -> "Move: ((0, 2), (1, 2))
+___
+BWB
+___";
+    "Move: ((2, 2), (1, 1))
+__B
+BW_
+___" -> "Move: ((0, 2), (1, 1))
+___
+BB_
+___";
+    "Move: ((2, 2), (1, 1))
+__B
+BW_
+___" -> "Move: ((1, 0), (2, 0))
+__B
+_W_
+B__";
+    "Move: ((0, 2), (1, 2))
+___
+BWB
+___" -> "Move: ((1, 1), (0, 1))
+_W_
+B_B
+___";
+    "Move: ((0, 2), (1, 2))
+B__
+BWB
+__W" -> "Move: ((1, 1), (0, 1))
+BW_
+B_B
+__W";
+    "Move: ((0, 2), (1, 2))
+B__
+BWB
+__W" -> "Move: ((1, 1), (0, 0))
+W__
+B_B
+__W";
+    "Move: ((0, 2), (1, 1))
+B__
+BB_
+__W" -> "Move: ((2, 2), (1, 2))
+B__
+BBW
+___";
+    "Move: ((0, 2), (1, 1))
+B__
+BB_
+__W" -> "Move: ((2, 2), (1, 1))
+B__
+BW_
+___";
+    "Move: ((2, 2), (1, 2))
+B__
+BBW
+___" -> "Move: ((1, 0), (2, 0))
+B__
+_BW
+B__";
+    "Move: ((2, 2), (1, 2))
+B__
+BBW
+___" -> "Move: ((1, 1), (2, 1))
+B__
+B_W
+_B_";
+    "Move: ((2, 2), (1, 1))
+B__
+BW_
+___" -> "Move: ((0, 0), (1, 1))
+___
+BB_
+___";
+    "Move: ((2, 2), (1, 1))
+B__
+BW_
+___" -> "Move: ((1, 0), (2, 0))
+B__
+_W_
+B__";
+    "Move: ((2, 1), (1, 0))
+B_B
+W__
+__W" -> "Move: ((0, 2), (1, 2))
+B__
+W_B
+__W";
+    "Move: ((2, 2), (1, 2))
+B_B
+B_W
+_W_" -> "Move: ((1, 0), (2, 0))
+B_B
+__W
+BW_";
+    "Move: ((2, 2), (1, 2))
+B_B
+B_W
+_W_" -> "Move: ((1, 0), (2, 1))
+B_B
+__W
+_B_";
+    "Move: ((0, 2), (1, 2))
+BB_
+W_B
+_WW" -> "Move: ((1, 0), (0, 1))
+BW_
+__B
+_WW";
+    "Move: ((0, 2), (1, 2))
+BB_
+W_B
+_WW" -> "Move: ((2, 1), (1, 1))
+BB_
+WWB
+__W";
+    "Move: ((0, 2), (1, 2))
+BB_
+W_B
+_WW" -> "Move: ((2, 1), (1, 2))
+BB_
+W_W
+__W";
+    "Move: ((2, 1), (1, 1))
+BB_
+WWB
+__W" -> "Move: ((0, 0), (1, 1))
+_B_
+WBB
+__W";
+    "Move: ((0, 0), (1, 1))
+_B_
+WBB
+__W" -> "Move: ((1, 0), (0, 0))
+WB_
+_BB
+__W";
+    "Move: ((0, 0), (1, 1))
+_B_
+WBB
+__W" -> "Move: ((1, 0), (0, 1))
+_W_
+_BB
+__W";
+    "Move: ((0, 0), (1, 1))
+_B_
+WBB
+__W" -> "Move: ((2, 2), (1, 1))
+_B_
+WWB
+___";
+    "Move: ((2, 2), (1, 1))
+_B_
+WWB
+___" -> "Move: ((1, 2), (2, 2))
+_B_
+WW_
+__B";
+    "Move: ((2, 1), (1, 2))
+BB_
+W_W
+__W" -> "Move: ((0, 1), (1, 1))
+B__
+WBW
+__W";
+    "Move: ((2, 1), (1, 2))
+BB_
+W_W
+__W" -> "Move: ((0, 1), (1, 0))
+B__
+B_W
+__W";
+    "Move: ((2, 1), (1, 2))
+BB_
+W_W
+__W" -> "Move: ((0, 1), (1, 2))
+B__
+W_B
+__W";
+    "Move: ((0, 1), (1, 1))
+B__
+WBW
+__W" -> "Move: ((1, 2), (0, 2))
+B_W
+WB_
+__W";
+    "Move: ((0, 1), (1, 0))
+B__
+B_W
+__W" -> "Move: ((1, 2), (0, 2))
+B_W
+B__
+__W";
+    "Move: ((2, 1), (1, 1))
+BBB
+_W_
+W_W" -> "Move: ((0, 0), (1, 0))
+_BB
+BW_
+W_W";
+    "Move: ((2, 1), (1, 1))
+BBB
+_W_
+W_W" -> "Move: ((0, 0), (1, 1))
+_BB
+_B_
+W_W";
+    "Move: ((0, 0), (1, 0))
+_BB
+BW_
+W_W" -> "Move: ((1, 1), (0, 2))
+_BW
+B__
+W_W";
+    "Move: ((0, 0), (1, 1))
+_BB
+_B_
+W_W" -> "Move: ((2, 0), (1, 0))
+_BB
+WB_
+__W";
+    "Move: ((0, 0), (1, 1))
+_BB
+_B_
+W_W" -> "Move: ((2, 0), (1, 1))
+_BB
+_W_
+__W";
+    "Move: ((0, 0), (1, 1))
+_BB
+_B_
+W_W" -> "Move: ((2, 2), (1, 2))
+_BB
+_BW
+W__";
+    "Move: ((0, 0), (1, 1))
+_BB
+_B_
+W_W" -> "Move: ((2, 2), (1, 1))
+_BB
+_W_
+W__";
+    "Move: ((2, 0), (1, 0))
+_BB
+WB_
+__W" -> "Move: ((1, 1), (2, 1))
+_BB
+W__
+_BW";
+    "Move: ((2, 0), (1, 0))
+_BB
+WB_
+__W" -> "Move: ((1, 1), (2, 2))
+_BB
+W__
+__B";
+    "Move: ((2, 0), (1, 1))
+_BB
+_W_
+__W" -> "Move: ((0, 2), (1, 2))
+_B_
+_WB
+__W";
+    "Move: ((2, 0), (1, 1))
+_BB
+_W_
+__W" -> "Move: ((0, 2), (1, 1))
+_B_
+_B_
+__W";
+    "Move: ((0, 2), (1, 1))
+_B_
+_B_
+__W" -> "Move: ((2, 2), (1, 2))
+_B_
+_BW
+___";
+    "Move: ((0, 2), (1, 1))
+_B_
+_B_
+__W" -> "Move: ((2, 2), (1, 1))
+_B_
+_W_
+___";
+    "Move: ((2, 2), (1, 2))
+_B_
+_BW
+___" -> "Move: ((0, 1), (1, 2))
+___
+_BB
+___";
+    "Move: ((2, 2), (1, 2))
+_B_
+_BW
+___" -> "Move: ((1, 1), (2, 1))
+_B_
+__W
+_B_";
+    "Move: ((2, 2), (1, 2))
+_BB
+_BW
+W__" -> "Move: ((1, 1), (2, 1))
+_BB
+__W
+WB_";
+    "Move: ((2, 2), (1, 2))
+_BB
+_BW
+W__" -> "Move: ((1, 1), (2, 0))
+_BB
+__W
+B__";
+    "Move: ((2, 2), (1, 1))
+_BB
+_W_
+W__" -> "Move: ((0, 2), (1, 2))
+_B_
+_WB
+W__";
+}
