@@ -18,9 +18,9 @@ class Hexapawn_Node:
         
         board_tuple = canonical_board_tuple(self.board)
         if board_tuple in Hexapawn_Node.seen_states:
-            existing_node = Hexapawn_Node.seen_states
-            self.children.append(existing_node)
             return
+        
+        Hexapawn_Node.seen_states[board_tuple] = self
 
         moves = get_valid_moves(self.board, self.turn)
         if not moves:
@@ -28,14 +28,13 @@ class Hexapawn_Node:
                 self.winner = "Tie"
             return
 
-        Hexapawn_Node.seen_states[board_tuple] = self
-
         for move in moves:
             new_board = apply_move(self.board, move)
             new_board_tuple = canonical_board_tuple(new_board)
             if new_board_tuple in Hexapawn_Node.seen_states:
                 existing_child = Hexapawn_Node.seen_states[new_board_tuple]
-                self.children.append(existing_child)
+                if existing_child not in self.children:
+                    self.children.append(existing_child)
                 continue
             next_turn = "B" if self.turn == "W" else "W"
             child = Hexapawn_Node(new_board, next_turn, parent=self, move=move)
