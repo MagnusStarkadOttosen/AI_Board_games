@@ -6,6 +6,8 @@ from anytree.exporter import DotExporter
 # os.environ["TEMP"] = "C:\\GraphvizTemp"
 
 class Hexapawn_Node:
+    seen_states = set()
+
     def __init__(self, board, turn, parent=None, move=None):
         self.board = board
         self.turn = turn
@@ -18,6 +20,11 @@ class Hexapawn_Node:
         if self.winner is not None:
             return
         
+        board_tuple = board_to_tuple(self.board)
+        if board_tuple in Hexapawn_Node.seen_states:
+            return
+        Hexapawn_Node.seen_states.add(board_tuple)
+
         moves = get_valid_moves(self.board, self.turn)
         if not moves:
             if check_winner(self.board) is None:
@@ -97,6 +104,9 @@ def build_anytree(node, parent=None):
     for child in node.children:
         build_anytree(child, tree_node)
     return tree_node
+
+def board_to_tuple(board):
+    return tuple(tuple(row) for row in board)
 
 initial_board = [
     ["B","B","B"],
