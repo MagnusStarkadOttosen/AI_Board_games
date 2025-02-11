@@ -20,7 +20,7 @@ class Hexapawn_Node:
         if self.winner is not None:
             return
         
-        board_tuple = board_to_tuple(self.board)
+        board_tuple = canonical_board_tuple(self.board)
         if board_tuple in Hexapawn_Node.seen_states:
             return
         Hexapawn_Node.seen_states.add(board_tuple)
@@ -107,6 +107,14 @@ def build_anytree(node, parent=None):
 
 def board_to_tuple(board):
     return tuple(tuple(row) for row in board)
+
+def mirror_board(board):
+    return [row[::-1] for row in board]
+
+def canonical_board_tuple(board):
+    original = board_to_tuple(board)
+    mirrored = board_to_tuple(mirror_board(board))
+    return min(original, mirrored)
 
 initial_board = [
     ["B","B","B"],
