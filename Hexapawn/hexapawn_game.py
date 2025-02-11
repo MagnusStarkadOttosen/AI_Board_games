@@ -1,137 +1,61 @@
-
-
-
-class hexapawn_game:
-    def __init__(self):
-        self.board = [
-            [2,2,2],
-            [0,1,0],
-            [1,1,1]
-        ]
-        self.current_player = 1
-
-    #Start game
-    def start_game(self):
-
-        winner = -1
-
-        while(1):
-            print(self.current_player)
-            self.print_board()
-
-            #Check for win
-            winner = self.win_condition()
-            if winner != -1:
-                break
-            #Swap player
-            if self.current_player == 1:
-                self.current_player = 2
-            else:
-                self.current_player = 1
-        
-        print(f"Winner is {winner}")
-
-
-    #Move
-    def move(self):
-
-
-        return
+class Hexapawn_Node:
+    def __init__(self, board, turn, parent=None):
+        self.board = board
+        self.turn = turn
+        self.parent = parent
+        self.children = []
     
-    #Print board
-    def print_board(self):
-        for row in self.board:
-            print(row)
-
-    #Check for win
-    def win_condition(self):
-        #If there is no more player 1, player 2 wins
-        if not any(1 in row for row in self.board):
-            return 2
-        #If there is no more player 2, player 1 wins
-        if not any(2 in row for row in self.board):
-            return 1
-        
-        #If player 1 reach the other side they win
-        if 1 in self.board[0]:
-            return 1
-        #If player 2 reach the other side they win
-        if 2 in self.board[2]:
-            return 2
-        
-        #Check if there are valid moves left
-        for row in self.board:
-            for e in row:
-                print(e)
-
-        #If no one has won return -1
-        return -1
-        
-        
-    #Return board
-    def return_board(self):
-        return self.board
-
-    #Validate moves
-    def valid_moves(self, pawn):
-        row, col = pawn
-        rows = 3
-        cols = 3
-        
-
-        if self.board[row][col] == 1:
-            # Get diagonal up-left (row-1, col-1)
-            diag_up_left = self.board[row - 1][col - 1] if row - 1 < rows and col - 1 >= 0 else None
-
-            # Get directly up (row-1, col)
-            up = self.board[row - 1][col] if row - 1 < rows else None
-
-            # Get diagonal up-right (row-1, col+1)
-            diag_up_right = self.board[row - 1][col + 1] if row - 1 < rows and col + 1 < cols else None
-
-            return {
-                "Diagonal UP-Left": diag_up_left,
-                "Directly Up": up,
-                "Diagonal Up-Right": diag_up_right
-            }
-        else:
-            # Get diagonal down-left (row+1, col-1)
-            diag_down_left = self.board[row + 1][col - 1] if row + 1 < rows and col - 1 >= 0 else None
-
-            # Get directly down (row+1, col)
-            down = self.board[row + 1][col] if row + 1 < rows else None
-
-            # Get diagonal down-right (row+1, col+1)
-            diag_down_right = self.board[row + 1][col + 1] if row + 1 < rows and col + 1 < cols else None
-
-            return {
-                "Diagonal Down-Left": diag_down_left,
-                "Directly Down": down,
-                "Diagonal Down-Right": diag_down_right
-            }
-
+    def generate_valid_children(self):
+        moves = get_valid_moves(self.board, self.turn)
+        for move in moves:
+            new_board = apply_move(self.board, move)
+            next_turn = "B" if self.turn == "W" else "W"
+            child = Hexapawn_Node(new_board, next_turn, parent=self)
+            self.children.append(child)
+            child.generate_valid_children()
     
-    def get_player_pawns(self, player):
-        pawns = []
-        for row_index, row in enumerate(self.board):
-            for col_index, value in enumerate(row):
-                if value == player:
-                    pawns.append((row_index,col_index))
-        return pawns
+    def __repr__(self):
+        return "\n".join("".join(row) for row in self.board) + "\n"
+
+def get_valid_moves(board, turn):
+    moves = []
+    direction = -1 if turn == "W" else 1
+
+    for row in range(3):
+        for col in range(3):
+            if board[row][col] == turn:
+                new_row = row + direction
+
+                if 0 <= new_row < 3 and board[new_row][col] == ".":
+                    moves.append(((row, col), (new_row, col)))
+
+                for d_col in [-1, 1]:
+                    new_col = col + d_col
+                    if 0 <= new_row < 3 and 0 <= new_col < 3:
+                        if board[new_row][new_col] not in [".", turn]:
+                            moves.append(((row, col), (new_row, new_col)))
+    return moves
 
 
+def apply_move(board, move):
+    new_board = [row[:] for row in board]
+    (r1, c1), (r2, c2) = move
+    new_board[r2][c2] = new_board[r1][c1]
+    new_board[r1][c1] = "."
+    return new_board
 
+def print_tree(node, depth=0):
+    print(" " * depth * 2 + f"Turn: {node.turn}\n{node}")
+    for child in node.children:
+        print_tree(child, depth + 1)
 
-start_game = hexapawn_game()
-# start_game.print_board()
+initial_board = [
+    ["B","B","B"],
+    [".",".","."],
+    ["W","W","W"]
+]
 
-# temp = start_game.return_board()
-# print(temp[0])
+root = Hexapawn_Node(initial_board, "W")
+root.generate_valid_children()
 
-# start_game.win_condition()
-pawns = start_game.get_player_pawns(2)
-print(pawns)
-
-print(start_game.valid_moves((0,0)))
-print(start_game.valid_moves((1,1)))
-print(start_game.valid_moves((2,2)))
+print_tree(root)
